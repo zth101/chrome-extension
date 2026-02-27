@@ -21,20 +21,6 @@ a script tag - usually placed in the bottom of our HTML body tag
 Using DOM manipulation - create two button elements, with unique IDs so we can reference and style them in CSS (don't forget display whatever text you desire in the button itself)
 
 
-//WE ARE HERE WITH THE ACTUAL CODING PROCESS
-
-
-What do we want to do when the START button is pressed?
-(1) Change the web browsers appearance to be calmer (maybe even rain calming emojis)
-(2) Play a soothing song/sound (need to access an API?)
-(3) Randomly generate a different encouraging/calming quote each time (definitely need an API)
-
-What do we want to do when the END button is pressed?
-(1) Remove/undo all visual changes made to the web browser
-(2) Pause/silence the calming audio 
-(3) Remove the encouraging quote from the page 
-
-
 
 How are we organizing the project so that some code will manipulate our chrome extension pop-up v.s. the code we want to affect the browser/web page it is running on?
 
@@ -57,13 +43,41 @@ Now our file is set up so that any JavaScript written in the content.js file wil
 
 
 
+//WE ARE HERE WITH THE ACTUAL CODING PROCESS
+
+
+
+What do we want to do when the START button is pressed?
+(1) Change the web browsers appearance to be calmer (maybe even rain calming emojis)
+(2) Play a soothing song/sound (need to access an API?)
+(3) Randomly generate a different encouraging/calming quote each time (definitely need an API)
+
+What do we want to do when the END button is pressed?
+(1) Remove/undo all visual changes made to the web browser
+(2) Pause/silence the calming audio 
+(3) Remove the encouraging quote from the page 
+
+
+
 When the START button is clicked (pop-up.js)   ->   How do we change a web page's appearance(content.js)?
 
+(1) Web Page Appearance
+- In the content.js file we need to create a style tag HTML element that will hold CSS rules (instructions for how something should look) 
+- Add a class of CSS rules to the style tag using .textContent - the class should be written as a string - make sure whatever HTML this is applied to will apply the styling to the entire web page
+    - Rain Calm Emojis
+    - Dim the Screen
+- Append the style tag to the current web page's HTML head tag (which is where styling goes) so the browser has access to the rules we created and want to apply
+- Next create a div HTML element and save it under a reference variable
+- Using the reference variable, add the CSS rules/class you passed to the web page to the div 
+- Finally append the styled div to the web page's body - if done correctly will applying styling to any browser
+
+(2) Play Soothing 
 
 
+How to connect the functionality we want to execute to the appropriate button?
+Add an event listener to each button that will run the desired functionality based on the click action 
 
-
-
+How to connect functionality from the content.js file to the pop-up.js file 
 
 
 

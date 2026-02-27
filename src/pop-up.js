@@ -2,7 +2,7 @@
 //create an HTML element that will serve as our breakdown button 
 const startButton = document.createElement("button")
 //give the button an id so we can reference it in CSS file
-startButton.id = "breakdown"
+startButton.id = "breakdownbtn"
 //populate the button with some text
 startButton.innerText = "Break Down Imminent"
 //append the element to the document - ARE WE APPENDING TO DOCUMENT OR SOMETHING ELSE
@@ -13,7 +13,7 @@ document.body.append(startButton)
 //create an HTML element that will serve as our breakdown button 
 const endButton = document.createElement("button")
 //give the button an id so we can reference it in CSS file
-endButton.id = "calm"
+endButton.id = "calmbtn"
 //populate the button with some text
 endButton.innerText = "Cleared Feelings Cache"
 //append the element to the document - ARE WE APPENDING TO DOCUMENT OR SOMETHING ELSE
@@ -32,3 +32,4 @@ document.body.append(endButton)
 //add an event listener to the button element calling all functions pertaining to the event
 
 
+npm 
